@@ -64,8 +64,8 @@
                             <img src="{{ asset('frontend/assets/img/icon-img/26.png') }}" alt="">
                         </div>
                         <div class="services-content">
-                            <h4>Free Shippig</h4>
-                            <p>Contrary to popular belief, Lorem Ipsum is random text. </p>
+                            <h4>Pengiriman Aman</h4>
+                            <p>Pengiriman menggunakan kurir pilihan anda yang aman. </p>
                         </div>
                     </div>
                     <div class="single-services mb-40">
@@ -74,7 +74,7 @@
                         </div>
                         <div class="services-content">
                             <h4>24/7 Support</h4>
-                            <p>Contrary to popular belief, Lorem Ipsum is random text. </p>
+                            <p>Sedia setiap saat untuk membantu anda. </p>
                         </div>
                     </div>
                     <div class="single-services mb-40">
@@ -82,8 +82,8 @@
                             <img src="{{ asset('frontend/assets/img/icon-img/28.png') }}" alt="">
                         </div>
                         <div class="services-content">
-                            <h4>Secure Payments</h4>
-                            <p>Contrary to popular belief, Lorem Ipsum is random text. </p>
+                            <h4>Pembayaran Aman</h4>
+                            <p>Pembayaran yang dijamin aman. </p>
                         </div>
                     </div>
                 </div>
