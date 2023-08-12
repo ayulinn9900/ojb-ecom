@@ -4,10 +4,10 @@
 	<div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url({{ asset('frontend/assets/img/bg/ayu.jpg') }})">
 		<div class="container-fluid">
 			<div class="breadcrumb-content text-center">
-				<h2>Register</h2>
+				<h2>Daftar</h2>
 				<ul>
 					<li><a href="#">home</a></li>
-					<li>register</li>
+					<li>Daftar</li>
 				</ul>
 			</div>
 		</div>
