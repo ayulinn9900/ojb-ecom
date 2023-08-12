@@ -14,8 +14,8 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">{{ __('Permissions') }}</h1>
-            <a href="{{ route('admin.permissions.create') }}" class="btn btn-primary btn-sm shadow-sm">{{ __('create new')}} <i class="fa fa-plus"> </i></a>
+        <h1 class="h3 mb-0 text-gray-800">{{ __('Perizinan') }}</h1>
+            <a href="{{ route('admin.permissions.create') }}" class="btn btn-primary btn-sm shadow-sm">{{ __('Tambah Baru')}} <i class="fa fa-plus"> </i></a>
     </div>
 
     <!-- Content Row -->
@@ -25,8 +25,8 @@
                     <table class="table table-bordered" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>Title</th>
+                                <th>Nomor</th>
+                                <th>Judul</th>
                                 <th>Action</th>
                             </tr>
                         </thead>

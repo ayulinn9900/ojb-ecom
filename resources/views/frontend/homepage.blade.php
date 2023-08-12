@@ -29,7 +29,7 @@
         <!-- categories -->
         <div class="container mt-5">
                 <div class="section-title-furits text-center">
-                    <h2>BROWSE OUR CATEGORIES</h2>
+                    <h2>CARI KATEGORI KAMI</h2>
                 </div>
                 <br>
             <div class="row mt-5">
@@ -55,7 +55,7 @@
         <div class="services-area wrapper-padding-4 gray-bg pt-120 pb-80">
             <div class="container-fluid">
                 <div class="section-title-furits text-center">
-                    <h2>Why Choose Us</h2>
+                    <h2>Kenapa Pilih Kami</h2>
                 </div>
                 <br>
                 <div class="services-wrapper mt-40">
@@ -65,7 +65,7 @@
                         </div>
                         <div class="services-content">
                             <h4>Pengiriman Aman</h4>
-                            <p>Pengiriman menggunakan kurir pilihan anda yang aman. </p>
+                            <p>Pengiriman menggunakan kurir pilihan anda yang aman </p>
                         </div>
                     </div>
                     <div class="single-services mb-40">
@@ -74,7 +74,7 @@
                         </div>
                         <div class="services-content">
                             <h4>24/7 Support</h4>
-                            <p>Sedia setiap saat untuk membantu anda. </p>
+                            <p>Sedia setiap saat untuk membantu anda</p>
                         </div>
                     </div>
                     <div class="single-services mb-40">
@@ -96,7 +96,7 @@
             <div class="container-fluid">
                 <br>
                 <div class="section-title-furits section-title-6 text-center mb-50">
-                    <h2>Popular Product</h2>
+                    <h2>Popular Populer</h2>
                 </div>
                 <br>
                 <div class="product-style">

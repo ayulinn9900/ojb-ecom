@@ -50,17 +50,15 @@
                                             <a href="/">home</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('shop.index') }}">shop</a>
+                                            <a href="{{ route('shop.index') }}">Produk</a>
                                         </li>
-                                        <li><a href="#">Categories</a>
+                                        <li><a href="#">Kategori</a>
                                             <ul class="single-dropdown">
                                                 @foreach($categories_menu as $category_menu)
                                                     <li><a href="{{ route('shop.index', $category_menu->slug) }}">{{ $category_menu->name }}</a></li>
                                                 @endforeach
                                             </ul>
                                         </li>
-                                        <li>
-                                            <a href="#">contact</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -142,14 +140,14 @@
                             <div class="furniture-login">
                                 <ul>
                                     @guest
-                                        <li>Get Access: <a href="{{ route('login') }}">Login</a></li>
-                                        <li><a href="{{ route('register') }}">Register</a></li>
+                                        <li> <a href="{{ route('login') }}">Masuk</a></li>
+                                        <li><a href="{{ route('register') }}">Daftar</a></li>
                                     @else
                                         <li>Hello: <a href="{{ route('profile.index') }}">{{ auth()->user()->username }}</a></li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
+                                            {{ __('Keluar') }}
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -160,7 +158,7 @@
                             </div>
                             <div class="furniture-search">
                                 <form>
-                                    <input placeholder="I am Searching for . . ." type="text" name="q" autocomplete="off" id="search">
+                                    <input placeholder="Cari di Ozi Jaya Battery . . ." type="text" name="q" autocomplete="off" id="search">
                                     <button disabled>
                                         <i class="ti-search"></i>
                                     </button>
@@ -169,11 +167,11 @@
                             <div class="furniture-wishlist">
                                 <ul>
                                     <li>
-                                        <a href="{{ route('favorite.index') }}"><i class="ti-heart"></i> Favorites</a>
+                                        <a href="{{ route('favorite.index') }}"><i class="ti-heart"></i> Favorti Saya</a>
                                     </li>
                                     @auth
                                     <li>
-                                        <a href="{{ route('orders.index') }}"><i class="ti-money"></i> Orders</a>
+                                        <a href="{{ route('orders.index') }}"><i class="ti-money"></i> Pesanan Saya</a>
                                     </li>
                                     @endauth
                                 </ul>
@@ -194,18 +192,18 @@
                         <div class="footer-widget mb-30">
                         <img height="60" style="transform:scale(1.5);object-fit: cover;" src="{{ asset('frontend/assets/img/logo/logo.png') }}" alt="">
                             <div class="footer-about-2">
-                                <p>There are many variations of passages of Lorem Ipsum <br>the majority have suffered alteration in some form, by <br> injected humour</p>
+                                <p>Toko Ozi Jaya Battery menjual berbagai produk aki <br>Kami menyediakan produk aki yang berkualitas dan terbaik untuk anda<br>Teknisi kami siap memasang aki anda dengan baik dan benar</p>
                             </div>
                         </div>
                         <div class="footer-widget mb-30">
-                            <h3 class="footer-widget-title-5">Contact Info</h3>
+                            <h3 class="footer-widget-title-5">Kontak Info</h3>
                             <div class="footer-info-wrapper-3">
                                 <div class="footer-address-furniture">
                                     <div class="footer-info-icon3">
                                         <span>Address: </span>
                                     </div>
                                     <div class="footer-info-content3">
-                                        <p>66 Sipu road Rampura Banasree <br>USA- 10800</p>
+                                        <p>Toko Ozi Jaya Battery <br>Jl. Keradenan No. 30 RT 02 RW 10, cibinong, Bogor 16918</p>
                                     </div>
                                 </div>
                                 <div class="footer-address-furniture">
@@ -213,7 +211,7 @@
                                         <span>Phone: </span>
                                     </div>
                                     <div class="footer-info-content3">
-                                        <p>+8801 (33) 515609735 <br>+8801 (66) 223352333</p>
+                                        <p>+62 877-7771-4191 <br>
                                     </div>
                                 </div>
                                 <div class="footer-address-furniture">
@@ -221,15 +219,15 @@
                                         <span>E-mail: </span>
                                     </div>
                                     <div class="footer-info-content3">
-                                        <p><a href="#"> email@domain.com</a> <br><a href="#"> domain@mail.info</a></p>
+                                        <p><a href="#"> Ozijaya001@gmail.com</a> <br>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="footer-widget mb-30">
-                            <h3 class="footer-widget-title-5">Newsletter</h3>
+                            <h3 class="footer-widget-title-5">Kabar Terbaru </h3>
                             <div class="footer-newsletter-2">
-                                <p>Send us your mail or next updates</p>
+                                <p>Kirim E-mail mu untuk kabar terbaru</p>
                                 <div id="mc_embed_signup" class="subscribe-form-5">
                                     <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                                         <div id="mc_embed_signup_scroll" class="mc-form">
@@ -245,13 +243,6 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom ptb-20 gray-bg-8">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <div class="copyright-furniture">
-                                <p>Copyright © <a href="https://hastech.company/">HasTech</a> 2018 . All Right Reserved.</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -303,7 +294,7 @@
                     },
                     templates: {
                         empty: [
-                            '<div class="list-group-item">There are no matching search results</div>'
+                            '<div class="list-group-item">Produk Tidak Ditemukan!</div>'
                         ],
                         header: [
                             '<div class="list-group search-results-dropdown">'

@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
-@section('title', 'User Profile')
+@section('title', 'Profile Saya')
 @section('content')
-	<div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url({{ asset('frontend/assets/img/bg/breadcrumb.jpg') }})">
+	<div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url({{ asset('frontend/assets/img/bg/ayu.jpg') }})">
 		<div class="container-fluid">
 			<div class="breadcrumb-content text-center">
 				<h2>Register</h2>

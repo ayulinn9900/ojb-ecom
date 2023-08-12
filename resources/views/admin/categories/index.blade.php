@@ -5,7 +5,7 @@
     <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    {{ __('Categories') }}
+                    {{ __('Kategori') }}
                 </h6>
                 <div class="ml-auto">
                     @can('category_create')
@@ -13,7 +13,7 @@
                         <span class="icon text-white-50">
                             <i class="fa fa-plus"></i>
                         </span>
-                        <span class="text">{{ __('New category') }}</span>
+                        <span class="text">{{ __('Tambah Kategori') }}</span>
                     </a>
                     @endcan
                 </div>
@@ -23,10 +23,9 @@
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Image</th>
-                        <th>Name</th>
-                        <th>Product count</th>
-                        <th>Parent</th>
+                        <th>Gambar</th>
+                        <th>Nama</th>
+                        <th>Jumlah Produk</th>
                         <th class="text-center" style="width: 30px;">Action</th>
                     </tr>
                     </thead>
@@ -47,7 +46,6 @@
                                 </a>
                             </td>
                             <td>{{ $category->products_count }}</td>
-                            <td>{{ $category->parent->name ?? '' }}</td>
                             <td>
                                 <div class="btn-group btn-group-sm">
                                     <a href="{{ route('admin.categories.edit', $category) }}" class="btn btn-sm btn-primary">

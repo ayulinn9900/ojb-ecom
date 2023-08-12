@@ -72,7 +72,7 @@
                                         @endif
                                     </div>
                                 </span>
-                                <span>{{ $product->approved_reviews_count }} Ratting (S)</span>
+                                <span>{{ $product->approved_reviews_count }} Ratting</span>
                             </div>
                         </div>
                         <div class="details-price">

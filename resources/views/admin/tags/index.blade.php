@@ -13,7 +13,7 @@
                         <span class="icon text-white-50">
                             <i class="fa fa-plus"></i>
                         </span>
-                        <span class="text">{{ __('New tag') }}</span>
+                        <span class="text">{{ __('Tambah Tag') }}</span>
                     </a>
                     @endcan
                 </div>
@@ -23,8 +23,8 @@
                     <thead>
                     <tr>
                         <th>No</th>
-                        <th>Name</th>
-                        <th>Product count</th>
+                        <th>Nama</th>
+                        <th>Jumlah Produk</th>
                         <th class="text-center" style="width: 30px;">Action</th>
                     </tr>
                     </thead>

@@ -14,8 +14,8 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">{{ __('Roles') }}</h1>
-            <a href="{{ route('admin.roles.create') }}" class="btn btn-primary btn-sm shadow-sm">{{ __('create new')}} <i class="fa fa-plus"> </i></a>
+        <h1 class="h3 mb-0 text-gray-800">{{ __('Peran') }}</h1>
+            <a href="{{ route('admin.roles.create') }}" class="btn btn-primary btn-sm shadow-sm">{{ __('Tambah Baru')}} <i class="fa fa-plus"> </i></a>
     </div>
 
     <!-- Content Row -->
@@ -25,9 +25,9 @@
                     <table class="table table-bordered" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>Title</th>
-                                <th>Permission</th>
+                                <th>Nomor</th>
+                                <th>Judul</th>
+                                <th>Perizinan</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -47,7 +47,7 @@
                                     </a>
                                     <form onclick="return alert('are you sure ? ')" class="d-inline" action="{{ route('admin.roles.destroy', $role->id) }}" method="POST">
                                         @csrf
-                                        @method('delete')
+                                        @method('Hapus')
                                         <button class="btn btn-danger">
                                             <i class="fa fa-trash"></i>
                                         </button>

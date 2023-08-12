@@ -45,7 +45,7 @@
                     </div>
                 </li>
             @empty
-                <a class="m-2">Be the first to write your review!</a>
+                <a class="m-2">JADILAH YANG PERTAMA MENULIS ULASAN ANDA!</a>
             @endforelse
         </ul>
     </div>
@@ -53,7 +53,7 @@
     <div class="comment_respond" x-show="showForm">
         @if($canRate)
             @if($showForm)
-                <h3 class="reply_title">{{ $currentRatingId ? 'Your Rating' : 'Leave a Reply' }}</h3>
+                <h3 class="reply_title">{{ $currentRatingId ? 'Peringkat Anda': 'Tinggalkan Balasan' }}</h3>
                 <form wire:submit.prevent="rate()" class="review__form score">
                     <div class="score-wrap">
                         <label for="star1">
@@ -108,13 +108,13 @@
             @endif
         @else
             <div class="alert alert-danger" role="alert">
-                <small>Must buy this product before write a review.</small>
+                <small>Harus membeli produk ini sebelum menulis ulasan.</small>
             </div>
         @endif
     </div>
     @else
         <a href="{{ route('login') }}" class="btn btn-dark">
-            Login to write a review!
+        Masuk untuk menulis ulasan!
         </a>
     @endauth
 </div>
