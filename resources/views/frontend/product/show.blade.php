@@ -55,7 +55,7 @@
                 <div class="col-md-12 col-lg-5 col-12">
                     <div class="product-details-content">
                         <h3>{{ $product->name }}</h3>
-                        <div class="rating-number">
+                        <!-- <div class="rating-number">
                             <div class="quick-view-number">
                                 <span class="score">
                                     <div class="score-wrap">
@@ -72,9 +72,10 @@
                                         @endif
                                     </div>
                                 </span>
-                                <span>{{ $product->approved_reviews_count }} Ratting</span>
+                                <span>{{ $product->approved_reviews_count }} ayu</span>
                             </div>
                         </div>
+                         -->
                         <div class="details-price">
                             <span>Rp.{{ number_format($product->price) }}</span>
                         </div>
@@ -88,7 +89,7 @@
                                         <input type="number" name="qty" min="1" value="1" class="cart-plus-minus-box" placeholder="qty">
                                     </div>
                                     <div class="quickview-btn-cart">
-                                        <button type="submit" class="submit contact-btn btn-hover">add to cart</button>
+                                        <button type="submit" class="submit contact-btn btn-hover">Masukan Keranjang</button>
                                     </div>
                                     <div class="quickview-btn-wishlist">
                                         <a class="btn-hover" href="#"><i class="pe-7s-like"></i></a>
@@ -97,13 +98,13 @@
 							</form>
                         <div class="product-details-cati-tag mt-35">
                             <ul>
-                                <li class="categories-title">Categories :</li>
+                                <li class="categories-title">Kategori :</li>
                                 <li><a class="badge badge-warning text-white" href="{{ route('shop.index', $product->category->slug) }}">{{ $product->category->name }}</a></li>
                             </ul>
                         </div>
                         <div class="product-details-cati-tag mtb-10">
                             <ul>
-                                <li class="categories-title">Tags :</li>
+                                <li class="categories-title">Tag :</li>
                                 <li>
                                     @if($product->tags->count() > 0)
                                         @foreach($product->tags as $tag)
@@ -117,7 +118,7 @@
                         </div>
                         <div class="product-share">
                             <ul>
-                                <li class="categories-title">Share :</li>
+                                <li class="categories-title">Bagikan :</li>
                                 <li>
                                 <iframe
                                         src="https://www.facebook.com/plugins/share_button.php?href={{ URL::current() }}&layout=button&size=small&appId=1079454672514017&width=75&height=20"
@@ -139,18 +140,18 @@
         <div class="container">
             <div class="product-description-review text-center">
                 <div class="description-review-title nav" role=tablist>
-                    <a class="active" href="#pro-review" data-toggle="tab" role="tab" aria-selected="false">
-                        Reviews ({{ $product->approved_reviews_count }})
-                    </a>
-                    <a href="#pro-dec" data-toggle="tab" role="tab" aria-selected="true">
-                        Description
+                    <!-- <a href="#pro-review" data-toggle="tab" role="tab" aria-selected="false">
+                        Ulasan ({{ $product->approved_reviews_count }})
+                    </a> -->
+                    <a class="active" href="#pro-dec" data-toggle="tab" role="tab" aria-selected="true">
+                        Deskripsi Produk
                     </a>
                 </div>
                 <div class="description-review-text tab-content">
-                    <div class="tab-pane fade" id="pro-dec" role="tabpanel">
+                    <div class="tab-pane active show fade" id="pro-dec" role="tabpanel">
                         <p>{!! $product->details !!}</p>
                     </div>
-                    <div class="tab-pane active show fade" id="pro-review" role="tabpanel">
+                    <!-- <div class="tab-pane fade" id="pro-review" role="tabpanel">
                         <div class="page-blog-details section-padding--lg bg--white pt-0">
                             <div class="container">
                                 <div class="row">
@@ -160,7 +161,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -169,7 +170,7 @@
             <div class="container-fluid">
                 <br>
                 <div class="section-title-furits section-title-6 text-center mb-50">
-                    <h2>Relate Product</h2>
+                    <h2>Produk Sejenis</h2>
                 </div>
                 <br>
                 <div class="product-style">

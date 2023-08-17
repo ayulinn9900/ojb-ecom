@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>{{ config('app.name', 'Laravel') }} | Success Payment </title>
+        <title>{{ config('app.name', 'Laravel') }} | Pembayaran Berhasil </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
@@ -33,12 +33,12 @@
     <body>
    <div class="container">
         <div style="height: 100vh;" class=" d-flex flex-column justify-content-center align-items-center">
-        <h1>Thank's for Order !</h1>
-        <p>we process your order as soon as possible</p>
+        <h1>Terimakasih Sudah Berbelanja</h1>
+        <p>Pesanan Anda Akan Segera Kami Proses</p>
 
         <div class="test">
-            <a href="{{ route('orders.index') }}" class="btn btn-warning text-white rounded">Your Order</a>
-            <a href="{{ route('homepage') }}" class="btn btn-primary text-white rounded">Homepage</a>
+            <a href="{{ route('orders.index') }}" class="btn btn-warning text-white rounded">Pesananan Anda</a>
+            <a href="{{ route('homepage') }}" class="btn btn-primary text-white rounded">Halaman Utama</a>
         </div>
         </div>
    </div>

@@ -5,20 +5,20 @@
     <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    {{ __('Orders') }}
+                    {{ __('Pesanan') }}
                 </h6>
             </div>
             <div class="table-responsive">
                 <table class="table table-hover table-bordered">
                     <thead>
                     <tr>
-                        <th>No</th>
-                        <th>Order ID</th>
-                        <th>Grand Total</th>
-                        <th>Name</th>
+                        <th>Nomor</th>
+                        <th>ID Pesanan</th>
+                        <th>Total</th>
+                        <th>Nama</th>
                         <th>Status</th>
-                        <th>Payment</th>
-                        <th class="text-center" style="width: 30px;">Action</th>
+                        <th>Pembayaran</th>
+                        <th class="text-center" style="width: 30px;">Aksi</th>
                     </tr>
                     </thead>
                     <tbody>

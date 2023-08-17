@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-    <div class="sidebar-widget mb-40">
+    <!-- <div class="sidebar-widget mb-40">
         <h3 class="sidebar-title">ULASAN TERBARU</h3>
         <hr style="margin-top: 0; margin-bottom: 10px; border: solid 1px;">
         <ul>
@@ -67,5 +67,5 @@
                 </li>
             @endforeach
         </ul>
-    </div>
+    </div> -->
 </div>

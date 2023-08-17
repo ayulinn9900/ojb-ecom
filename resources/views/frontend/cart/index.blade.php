@@ -1,5 +1,5 @@
 @extends('layouts.frontend')
-@section('title', 'Cart')
+@section('title', 'keranjang')
 @section('content')
 	<!-- shopping-cart-area start -->
 	<div class="cart-main-area pt-95 pb-100">
@@ -16,17 +16,17 @@
                         </div>
                     @endif
 
-					<h1 class="cart-heading text-center">Cart Page</h1>
+					<h1 class="cart-heading text-center">KERANJANG BELANJA</h1>
 						<div class="table-content table-responsive">
 							<table>
 								<thead>
 									<tr>
-										<th>remove</th>
-										<th>images</th>
-										<th>Product</th>
-										<th>Price</th>
-										<th>Quantity</th>
-										<th>Total</th>
+										<th>Hapus</th>
+										<th>Gambar</th>
+										<th>Produk</th>
+										<th>Harga</th>
+										<th>Jumlah</th>
+										<th>Total Harga</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -58,7 +58,7 @@
 										</tr>
 									@empty
 										<tr>
-											<td colspan="6">The cart is empty!</td>
+											<td colspan="6">Keranjang Kosong!</td>
 										</tr>
 									@endforelse
 								</tbody>
@@ -68,7 +68,7 @@
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 								<div class="coupon-all">
 									<div class="coupon2">
-                                        <input class="button" name="update_cart" value="Update cart" type="submit">
+                                        <input class="button" name="update_cart" value="Update" type="submit">
 									</div>
 								</div>
 							</div>
@@ -77,11 +77,11 @@
 						<div class="row">
 							<div class="col-md-5 ml-auto">
 								<div class="cart-page-total">
-									<h2>Cart totals</h2>
+									<h2>Total</h2>
 									<ul>
 										<li>Total<span>{{ number_format(\Cart::getTotal()) }}</span></li>
 									</ul>
-									<a href="{{ route('checkout.process') }}">Proceed to checkout</a>
+									<a href="{{ route('checkout.process') }}">CHECKOUT</a>
 								</div>
 							</div>
 						</div>

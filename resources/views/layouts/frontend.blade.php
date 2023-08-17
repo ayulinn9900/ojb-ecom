@@ -47,7 +47,7 @@
                                 <nav>
                                     <ul>
                                         <li>
-                                            <a href="/">home</a>
+                                            <a href="/">Home</a>
                                         </li>
                                         <li>
                                             <a href="{{ route('shop.index') }}">Produk</a>
@@ -101,7 +101,7 @@
                                             </div>
                                         </li>
                                         <li class="cart-btn-wrapper">
-                                            <a class="cart-btn btn-hover" href="{{ route('cart.index') }}">view cart</a>
+                                            <a class="cart-btn btn-hover" href="{{ route('cart.index') }}">Lihat</a>
                                             <a class="cart-btn btn-hover" href="{{ route('checkout.process') }}">checkout</a>
                                         </li>
                                     </ul>
@@ -200,7 +200,7 @@
                             <div class="footer-info-wrapper-3">
                                 <div class="footer-address-furniture">
                                     <div class="footer-info-icon3">
-                                        <span>Address: </span>
+                                        <span>Alamat: </span>
                                     </div>
                                     <div class="footer-info-content3">
                                         <p>Toko Ozi Jaya Battery <br>Jl. Keradenan No. 30 RT 02 RW 10, cibinong, Bogor 16918</p>
@@ -208,7 +208,7 @@
                                 </div>
                                 <div class="footer-address-furniture">
                                     <div class="footer-info-icon3">
-                                        <span>Phone: </span>
+                                        <span>No. Telp: </span>
                                     </div>
                                     <div class="footer-info-content3">
                                         <p>+62 877-7771-4191 <br>

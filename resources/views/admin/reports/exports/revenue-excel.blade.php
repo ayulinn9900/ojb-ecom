@@ -1,12 +1,12 @@
 <table>
 	<thead>
 		<tr>
-			<th>Date</th>
-			<th>Orders</th>
-			<th>Gross Revenue</th>
-			<th>Taxes</th>
-			<th>Shipping</th>
-			<th>Net Revenue</th>
+			<th>Tanggal</th>
+			<th>Pesanan</th>
+			<th>Pendaptan Kotor</th>
+			<!-- <th>Taxes</th> -->
+			<th>Ongkos Kirim</th>
+			<th>Pendapatan Bersih</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -22,7 +22,7 @@
 				<td>{{ $revenue->date, 'd M Y' }}</td>
 				<td>{{ $revenue->num_of_orders }}</td>
 				<td>{{ $revenue->gross_revenue }}</td>
-				<td>{{ $revenue->taxes_amount }}</td>
+				<!-- <td>{{ $revenue->taxes_amount }}</td> -->
 				<td>{{ $revenue->shipping_amount }}</td>
 				<td>{{ $revenue->net_revenue }}</td>
 			</tr>
@@ -39,7 +39,7 @@
 			<td>Total</td>
 			<td>{{ $totalOrders }}</td>
 			<td>{{ $totalGrossRevenue }}</td>
-			<td>{{ $totalTaxesAmount }}</td>
+			<!-- <td>{{ $totalTaxesAmount }}</td> -->
 			<td>{{ $totalShippingAmount }}</td>
 			<td>{{ $totalNetRevenue }}</td>
 		</tr>

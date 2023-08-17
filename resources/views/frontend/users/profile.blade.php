@@ -61,7 +61,7 @@
 
 									<div class="form-group row">
 										<div class="col-md-12">
-                                            <label for="address1">Alamat 1</label>
+                                            <label for="address1">Nama Jalan, Gedung, No. Rumah</label>
                                             <textarea name="address1" rows="5">{{ auth()->user()->address1 }}</textarea>
 											@error('address1')
 												<div class="alert alert-danger">{{ $message }}</div>
@@ -71,8 +71,8 @@
 
 									<div class="form-group row">
 										<div class="col-md-12">
-                                            <label for="address2">Alamat 2</label>
-                                            <textarea name="address2" rows="5">{{ auth()->user()->address2 }}</textarea>
+                                            <label for="address2">Detail Lainnya</label>
+                                            <textarea name="address2" rows="5" placeholder="Blok/Unit No. Patokan...">{{ auth()->user()->address2 }}</textarea>
 											@error('address2')
 												<div class="alert alert-danger">{{ $message }}</div>
 											@enderror
@@ -93,7 +93,7 @@
 											@enderror
 										</div>
 										<div class="col-md-6">
-                                            <label>KOta<span class="required">*</span></label>
+                                            <label>Kota<span class="required">*</span></label>
                                             <select name="city_id" id="city-id"  value="{{ auth()->user()->city_id }}" >
                                                 @foreach($cities as $city => $ty)
                                                     <option {{ auth()->user()->city_id == $city ? 'selected' : null }} value="{{ $city }}">{{ $ty }}</option>

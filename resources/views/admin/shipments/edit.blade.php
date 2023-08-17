@@ -6,7 +6,7 @@
 		<div class="col-lg-6">
 			<div class="card card-default">
 				<div class="card-header card-header-border-bottom">
-					<h2>Order Shipment #{{ $shipment->order->code }}</h2>
+					<h2>Pengiriman Pesanan #{{ $shipment->order->code }}</h2>
 				</div>
 				<div class="card-body">
                     <form action="{{ url('admin/shipments', $shipment->id) }}" method="post">
@@ -14,24 +14,24 @@
                         @method('put')
                         <div class="form-group row">
                             <div class="col-md-6">
-                                <label for="first_name">First Name</label>
+                                <label for="first_name">Nama Depan</label>
                                 <input type="text" name="first_name"  value="{{ $shipment->first_name }}" class="form-control" readonly>
                             </div>
                             <div class="col-md-6">
-                                <label for="last_name">Last Name</label>
+                                <label for="last_name">Nama Belakang</label>
                                 <input type="text" name="last_name"  value="{{ $shipment->last_name }}" class="form-control" readonly>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="address1">Address 1</label>
+                            <label for="address1">Nama Jalan, Gedung, No. Rumah </label>
                             <input type="text" name="address1"  value="{{ $shipment->address1 }}" class="form-control" readonly>
                         </div>
                         <div class="form-group">
-                            <label for="address2">Address 2</label>
+                            <label for="address2">Detail Lainnya</label>
                             <input type="text" name="address2" value="{{ $shipment->address2 }}" class="form-control" readonly>
                         </div>
                         <div class="form-group">
-                        <label>Province<span class="required">*</span></label>
+                        <label>Provinsi<span class="required">*</span></label>
                             <select name="province_id" class="form-control" disabled>
                                     <option value="">- Please Select -</option>
                                 @foreach($provinces as $province => $pro)
@@ -41,7 +41,7 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-md-6">
-                                <label>City<span class="required">*</span></label>
+                                <label>Kota<span class="required">*</span></label>
                                 <select name="city_id" class="form-control" disabled>
                                     @foreach($cities as $city => $ty)
                                         <option {{ $shipment->city_id == $city ? 'selected' : null }} value="{{ $city }}">{{ $ty }}</option>
@@ -49,13 +49,13 @@
                                 </select> 
                             </div>
                             <div class="col-md-6">
-                                <label for="postcode">Postcode</label>
+                                <label for="postcode">Kode Pos</label>
                                 <input type="text" name="postcode" value="{{ $shipment->postcode }}" class="form-control" readonly>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-md-6">
-                                <label for="phone">Phone</label>
+                                <label for="phone">No. Telp</label>
                                 <input type="text" name="phone" value="{{ $shipment->phone }}" class="form-control" readonly>
                             </div>
                             <div class="col-md-6">
@@ -69,17 +69,17 @@
                                 <input type="number" name="qty" value="{{ $shipment->total_qty }}" class="form-control" readonly>
                             </div>
                             <div class="col-md-6">
-                                <label for="total_weight">Total Weight</label>
+                                <label for="total_weight">Total Berat</label>
                                 <input type="text" name="total_weight" value="{{ $shipment->total_weight }}" class="form-control" readonly>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="track_number">Track Number</label>
+                            <label for="track_number">Nomor Resi</label>
                             <input type="text" name="track_number" value="{{ $shipment->track_number }}" class="form-control" >
                         </div>
                         <div class="form-footer pt-5 border-top">
-                            <button type="submit" class="btn btn-primary btn-default">Save</button>
-                            <a href="{{ url('admin/orders/'. $shipment->order->id) }}" class="btn btn-secondary btn-default">Back</a>
+                            <button type="submit" class="btn btn-primary btn-default">Simpan</button>
+                            <a href="{{ url('admin/orders/'. $shipment->order->id) }}" class="btn btn-secondary btn-default">Kembali</a>
                         </div>
                     </form>
 				</div>
@@ -88,29 +88,29 @@
 		<div class="col-lg-6">
 			<div class="card card-default">
 				<div class="card-header card-header-border-bottom">
-					<h2>Detail Order</h2>
+					<h2>Detail Pesanan</h2>
 				</div>
 				<div class="card-body">
 					<div class="row">
 						<div class="col-xl-6 col-lg-6">
-							<p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Billing Address</p>
+							<p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Alamat Pengiriman</p>
 							<address>
 								{{ $shipment->order->customer_company }} {{ $shipment->order->customer_last_name }}
 								<br> {{ $shipment->order->customer_address1 }}
 								<br> {{ $shipment->order->customer_address2 }}
 								<br> Email: {{ $shipment->order->customer_email }}
-								<br> Phone: {{ $shipment->order->customer_phone }}
-								<br> Postcode: {{ $shipment->order->customer_postcode }}
+								<br> No. Telp: {{ $shipment->order->customer_phone }}
+								<br> Kode Pos: {{ $shipment->order->customer_postcode }}
 							</address>
 						</div>
 						<div class="col-xl-6 col-lg-6">
-							<p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Details</p>
+							<p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Detail Pesanan</p>
 							<address>
 								ID: <span class="text-dark">#{{ $shipment->order->code }}</span>
 								<br> {{ $shipment->order->order_date }}
 								<br> Status: {{ $shipment->order->status }}
-								<br> Payment Status: {{ $shipment->order->payment_status }}
-								<br> Shipped by: {{ $shipment->order->shipping_service_name }}
+								<br> Status Pembayaran: {{ $shipment->order->payment_status }}
+								<br> Dikirim Oleh: {{ $shipment->order->shipping_service_name }}
 							</address>
 						</div>
 					</div>
@@ -133,7 +133,7 @@
 								</tr>
 							@empty
 								<tr>
-									<td colspan="6">Order item not found!</td>
+									<td colspan="6">Tidak Ada Pesanan!</td>
 								</tr>
 							@endforelse
 						</tbody>
@@ -144,10 +144,11 @@
 								<li class="mid pb-3 text-dark">Subtotal
 									<span class="d-inline-block float-right text-default">{{ $shipment->order->base_total_price }}</span>
 								</li>
-								<li class="mid pb-3 text-dark">Tax(10%)
+								<!-- <li class="mid pb-3 text-dark">Tax(10%)
 									<span class="d-inline-block float-right text-default">{{ $shipment->order->tax_amount }}</span>
 								</li>
-								<li class="mid pb-3 text-dark">Shipping Cost
+								 -->
+								<li class="mid pb-3 text-dark">Ongkos Kirim
 									<span class="d-inline-block float-right text-default">{{ $shipment->order->shipping_cost }}</span>
 								</li>
 								<li class="pb-3 text-dark">Total
