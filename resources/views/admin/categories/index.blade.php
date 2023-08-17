@@ -34,12 +34,16 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>
-                                @if($category->cover)
-                                    <img src="{{ Storage::url('images/categories/' . $category->cover) }}"
-                                        width="60" height="60" alt="{{ $category->name }}">
-                                @else
-                                    <span class="badge badge-primary">No image</span>
-                                @endif
+                            @if($category->cover)
+                                <img
+                                    class="mb-2"
+                                    src="{{ Storage::url('images/categories/' . $category->cover) }}"
+                                    alt="{{ $category->name }}" width="100" height="100">
+                            @else
+                                <img
+                                    class="mb-2"
+                                    src="{{ asset('img/no-img.png') }}" alt="{{ $category->name }}" width="60" height="60">
+                            @endif
                             </td>
                             <td><a href="{{ route('admin.categories.show', $category->id) }}">
                                     {{ $category->name }}

@@ -5,7 +5,7 @@
     <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    {{ __('Products') }}
+                    {{ __('Produk') }}
                 </h6>
                 <div class="ml-auto">
                     @can('product_create')
@@ -13,7 +13,7 @@
                         <span class="icon text-white-50">
                             <i class="fa fa-plus"></i>
                         </span>
-                        <span class="text">{{ __('New product') }}</span>
+                        <span class="text">{{ __('Tambah Produk') }}</span>
                     </a>
                     @endcan
                 </div>
@@ -22,16 +22,16 @@
                 <table class="table table-hover table-bordered">
                     <thead>
                     <tr>
-                        <th>No</th>
-                        <th>Image</th>
-                        <th>Name</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Weight</th>
-                        <th>Tags</th>
-                        <th>Category</th>
+                        <th>Nomor</th>
+                        <th>Gambar</th>
+                        <th>Nama</th>
+                        <th>Stok Produk</th>
+                        <th>Harga</th>
+                        <th>Berat</th>
+                        <th>Tag</th>
+                        <th>Kategori</th>
                         <th>Status</th>
-                        <th class="text-center" style="width: 30px;">Action</th>
+                        <th class="text-center" style="width: 30px;">Aksi</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -71,7 +71,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td class="text-center" colspan="12">No products found.</td>
+                            <td class="text-center" colspan="12">Belum Ada Produk</td>
                         </tr>
                     @endforelse
                     </tbody>

@@ -1,13 +1,13 @@
 @extends('layouts.frontend')
 @section('title', 'Favorite Items')
 @section('content')
-	<div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url({{ asset('frontend/assets/img/bg/breadcrumb.jpg') }})">
+	<div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url({{ asset('frontend/assets/img/bg/ayuN.jpg') }})">
 		<div class="container-fluid">
 			<div class="breadcrumb-content text-center">
-				<h2>My Favorites</h2>
+				<h2>FAVORIT SAYA</h2>
 				<ul>
-					<li><a href="{{ url('/') }}">home</a></li>
-					<li>my favorites</li>
+					<li><a href="{{ url('/') }}">Home</a></li>
+					<li>Favorit Saya</li>
 				</ul>
 			</div>
 		</div>
@@ -16,12 +16,12 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-3">
-                <h3 class="sidebar-title">User Menu</h3>
+                <h3 class="sidebar-title">Menu Pengguna</h3>
                     <div class="sidebar-categories">
                         <ul>
-                            <li><a href="{{ route('profile.index') }}">Profile</a></li>
-                            <li><a href="{{ route('orders.index') }}">Orders</a></li>
-                            <li><a href="{{ route('favorite.index') }}">Favorites</a></li>
+                            <li><a href="{{ route('profile.index') }}">Profil</a></li>
+                            <li><a href="{{ route('orders.index') }}">Pesanan</a></li>
+                            <li><a href="{{ route('favorite.index') }}">Favorit</a></li>
                         </ul>
                     </div>
 				</div>
@@ -31,10 +31,10 @@
                         <table>
 								<thead>
 									<tr>
-										<th>remove</th>
-										<th>Image</th>
-										<th>Product</th>
-										<th>Price</th>
+										<th>Hapus</th>
+										<th>Gambar</th>
+										<th>Produk</th>
+										<th>Harga</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -65,7 +65,7 @@
 										</tr>
 									@empty
 										<tr>
-											<td colspan="4">You have no favorite product</td>
+											<td colspan="4">Kamu Tidak Memiliki Produk Favorit!t</td>
 										</tr>
 									@endforelse
                                 </tbody>

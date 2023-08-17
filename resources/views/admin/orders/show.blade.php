@@ -5,15 +5,15 @@
     <div class="content">
         <div class="invoice-wrapper rounded border bg-white py-5 px-3 px-md-4 px-lg-5">
             <div class="d-flex justify-content-between">
-                <h2 class="text-dark font-weight-medium">Order ID #{{ $order->code }}</h2>
+                <h2 class="text-dark font-weight-medium">ID Pesanan #{{ $order->code }}</h2>
                 <div class="btn-group">
                     <a href="{{ route('admin.orders.index') }}" class="btn btn-sm btn-warning">
-                     Go Back</a>
+                     Kembali</a>
                 </div>
             </div>
             <div class="row pt-5">
-                <div class="col-xl-4 col-lg-4">
-                    <p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Billing Address</p>
+                <!-- <div class="col-xl-4 col-lg-4">
+                    <p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Alamat Penagihan</p>
                     <address>
                         {{ $order->customer_first_name }} {{ $order->customer_last_name }}
                         <br> {{ $order->customer_address1 }}
@@ -22,9 +22,9 @@
                         <br> Phone: {{ $order->customer_phone }}
                         <br> Postcode: {{ $order->customer_postcode }}
                     </address>
-                </div>
+                </div> -->
                 <div class="col-xl-4 col-lg-4">
-                    <p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Shipment Address</p>
+                    <p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Alamat Pengiriman</p>
                     <address>
                         {{ $order->shipment->first_name }} {{ $order->shipment->last_name }}
                         <br> {{ $order->shipment->address1 }}
@@ -35,16 +35,16 @@
                     </address>
                 </div>
                 <div class="col-xl-4 col-lg-4">
-                    <p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Details</p>
+                    <p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Detail Pesanan</p>
                     <address>
                         ID: <span class="text-dark">#{{ $order->code }}</span>
-                        <br> DATE: <span>{{ $order->order_date }}</span>
+                        <br> Tanggal: <span>{{ $order->order_date }}</span>
                         <br>
-                        NOTE: <span>{{ $order->note }}</span>
+                        Status: <span>{{ $order->note }}</span>
                         <br> Status: {{ $order->status }} {{ $order->cancelled_at }}
-                            <br> Cancellation Note : {{ $order->cancellation_note}}
-                        <br> Payment Status: {{ $order->payment_status }}
-                        <br> Shipped by: {{ $order->shipping_service_name }}
+                            <br> Catatan Pembatalan : {{ $order->cancellation_note}}
+                        <br> Status Pembayaran: {{ $order->payment_status }}
+                        <br> Dikirim Oleh: {{ $order->shipping_service_name }}
                     </address>
                 </div>
             </div>
@@ -53,8 +53,8 @@
                     <tr>
                         <th>#</th>
                         <th>Item</th>
-                        <th>Quantity</th>
-                        <th>Unit Cost</th>
+                        <th>Jumlah</th>
+                        <th>Harga Satuan</th>
                         <th>Total</th>
                     </tr>
                 </thead>
@@ -69,7 +69,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="6">Order item not found!</td>
+                            <td colspan="6">Belum Ada Pesanan!</td>
                         </tr>
                     @endforelse
                 </tbody>
@@ -80,10 +80,11 @@
                         <li class="mid pb-3 text-dark">Subtotal
                             <span class="d-inline-block float-right text-default">{{ $order->base_total_price }}</span>
                         </li>
-                        <li class="mid pb-3 text-dark">Tax(10%)
+                        <!-- <li class="mid pb-3 text-dark">Tax(10%)
                             <span class="d-inline-block float-right text-default">{{ $order->tax_amount }}</span>
                         </li>
-                        <li class="mid pb-3 text-dark">Shipping Cost
+                         -->
+                        <li class="mid pb-3 text-dark">Ongkos Kirim
                             <span class="d-inline-block float-right text-default">{{ $order->shipping_cost }}</span>
                         </li>
                         <li class="pb-3 text-dark">Total
@@ -91,7 +92,7 @@
                         </li>
                     </ul>
                     @if ($order->isPaid() && $order->isConfirmed())
-                        <a href="{{ route('admin.shipments.edit', $order->shipment->id) }}" class="btn btn-block mt-2 btn-lg btn-primary btn-pill"> Procced to Shipment</a>
+                        <a href="{{ route('admin.shipments.edit', $order->shipment->id) }}" class="btn btn-block mt-2 btn-lg btn-primary btn-pill"> Kirim Barang</a>
                     @endif
 
                     @if (in_array($order->status, [\App\Models\Order::CREATED, \App\Models\Order::CONFIRMED]))
@@ -101,12 +102,12 @@
                         
                         <form action="{{ route('admin.orders.complete', $order->id) }}" method="post" >
                             @csrf
-                            <button class="btn btn-block mt-2 btn-lg btn-success btn-pill"> Mark as Completed</button>
+                            <button class="btn btn-block mt-2 btn-lg btn-success btn-pill"> Tandai Sudah Selesai</button>
                         </form>
                     @endif
 
                     @if (!in_array($order->status, [\App\Models\Order::DELIVERED, \App\Models\Order::COMPLETED]))
-                        <a href="" class="btn btn-block mt-2 btn-lg btn-secondary btn-pill delete" onclick="event.preventDefault();document.getElementById('delete-form-{{$order->id}}').submit();"> Remove</a>
+                        <a href="" class="btn btn-block mt-2 btn-lg btn-secondary btn-pill delete" onclick="event.preventDefault();document.getElementById('delete-form-{{$order->id}}').submit();"> Hapus</a>
                         
                         <form action="{{ route('admin.orders.destroy', $order) }} }}" method="post" id="delete-form-{{$order->id}}" class="d-none">
                             @csrf

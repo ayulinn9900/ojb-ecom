@@ -2,7 +2,7 @@
 <html>
   	<head>
 		<meta charset="utf-8">
-		<title>Revenue Reprot</title>
+		<title>Laporan Pendapatan</title>
 		<style type="text/css">
 			table {
 				width: 100%;
@@ -39,12 +39,12 @@
 		<table>
 			<thead>
 				<tr>
-					<th>Date</th>
-					<th>Orders</th>
-					<th>Gross Revenue</th>
-					<th>Taxes</th>
-					<th>Shipping</th>
-					<th>Net Revenue</th>
+				<th>Tanggal</th>
+				<th>Pesanan</th>
+				<th>Pendaptan Kotor</th>
+				<!-- <th>Taxes</th> -->
+				<th>Ongkos Kirim</th>
+				<th>Pendapatan Bersih</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -59,7 +59,7 @@
 					<tr>    
 						<td>{{ $revenue->date }}</td>
 						<td>{{ $revenue->num_of_orders }}</td>
-						<td>{{ $revenue->gross_revenue }}</td>
+						<!-- <td>{{ $revenue->gross_revenue }}</td> -->
 						<td>{{ $revenue->taxes_amount }}</td>
 						<td>{{ $revenue->shipping_amount }}</td>
 						<td>{{ $revenue->net_revenue }}</td>
@@ -78,7 +78,7 @@
 					<td>Total</td>
 					<td><strong>{{ $totalOrders }}</strong></td>
 					<td><strong>{{ $totalGrossRevenue }}</strong></td>
-					<td><strong>{{ $totalTaxesAmount }}</strong></td>
+					<!-- <td><strong>{{ $totalTaxesAmount }}</strong></td> -->
 					<td><strong>{{ $totalShippingAmount }}</strong></td>
 					<td><strong>{{ $totalNetRevenue }}</strong></td>
 				</tr>

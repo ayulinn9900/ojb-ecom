@@ -5,14 +5,14 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    {{ __('Create product') }}
+                    {{ __('Tambah Produk') }}
                 </h6>
                 <div class="ml-auto">
                     <a href="{{ route('admin.products.index') }}" class="btn btn-primary">
                         <span class="icon text-white-50">
                             <i class="fa fa-home"></i>
                         </span>
-                        <span class="text">{{ __('Back to products') }}</span>
+                        <span class="text">{{ __('Kembali Ke Produk') }}</span>
                     </a>
                 </div>
             </div>
@@ -22,21 +22,21 @@
                     <div class="row">
                         <div class="col-4">
                             <div class="form-group">
-                                <label for="name">Name</label>
+                                <label for="name">Nama</label>
                                 <input class="form-control" id="name" type="text" name="name" value="{{ old('name') }}">
                                 @error('name')<span class="text-danger">{{ $message }}</span>@enderror
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-group">
-                                <label for="price">Price</label>
+                                <label for="price">Harga</label>
                                 <input class="form-control" id="price" type="number" name="price" value="{{ old('price') }}">
                                 @error('price')<span class="text-danger">{{ $message }}</span>@enderror
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-group">
-                                <label for="quantity">Quantity</label>
+                                <label for="quantity">Stok Produk</label>
                                 <input class="form-control" id="quantity" type="number" name="quantity" value="{{ old('quantity') }}">
                                 @error('quantity')<span class="text-danger">{{ $message }}</span>@enderror
                             </div>
@@ -45,9 +45,9 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="form-group">
-                                <label for="category_id">Category</label>
+                                <label for="category_id">Kategori</label>
                                 <select name="category_id" id="category_id" class="form-control">
-                                    <option value="">- Select category -</option>
+                                    <option value="">- Pilih Kategori -</option>
                                     @forelse($categories as $category)
                                         <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : null }}>
                                             {{ $category->name }}
@@ -60,7 +60,7 @@
                         </div>
                         <div class="col-6">
                             <div class="form-group">
-                                <label for="tags">Tags</label>
+                                <label for="tags">Tag</label>
                                 <select name="tags[]" id="tags" class="form-control select2" multiple="multiple" required>
                                     @forelse($tags as $tag)
                                         <option value="{{ $tag->id }}">{{ $tag->name }}</option>
@@ -74,7 +74,7 @@
                    <div class="row">
                         <div class="col-6">
                             <div class="form-group">
-                                <label for="weight">Weight (gram)</label>
+                                <label for="weight">Berat (Gram)</label>
                                 <input type="number" name="weight" value="{{ old('weight') }}" class="form-control">
                                 @error('weight')<span class="text-danger">{{ $message }}</span>@enderror
                             </div>
@@ -83,7 +83,7 @@
                             <div class="form-group">
                                 <label for="status">Status</label>
                                 <select name="status" id="status" class="form-control">
-                                    <option value="">- Select Status-</option>
+                                    <option value="">- Pilih Status-</option>
                                     <option value="1" {{ old('status') == "1" ? 'selected' : null }}>Active</option>
                                     <option value="0" {{ old('status') == "0" ? 'selected' : null }}>Inactive</option>
                                 </select>
@@ -94,8 +94,8 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group">
-                            <label for="description" class="text-small text-uppercase">{{ __('Description') }}</label>
-                            <textarea name="description" rows="3" class="form-control summernote">{!! old('description') !!}</textarea>
+                            <label for="description" class="text-small text-uppercase">{{ __('Spesifikasi Produk') }}</label>
+                            <textarea name="description" rows="3" class="form-control summernote">{!! old('Spesifikasi Produk') !!}</textarea>
                             @error('description')<span class="text-danger">{{ $message }}</span>@enderror
                             </div>
                         </div>
@@ -103,15 +103,15 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group">
-                            <label for="details" class="text-small text-uppercase">{{ __('details') }}</label>
-                            <textarea name="details" rows="3" class="form-control summernote">{!! old('details') !!}</textarea>
+                            <label for="details" class="text-small text-uppercase">{{ __('Deskripsi Produk') }}</label>
+                            <textarea name="details" rows="3" class="form-control summernote">{!! old('Deskripsi Produk') !!}</textarea>
                             @error('details')<span class="text-danger">{{ $message }}</span>@enderror
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <label for="images">{{ __('images') }}</label>
+                            <label for="images">{{ __('Gambar') }}</label>
                             <br>
                             <div class="file-loading">
                                 <input type="file" name="images[]" id="product-images" class="file-input-overview" multiple="multiple">
@@ -120,7 +120,7 @@
                         </div>
                     </div>
                     <div class="form-group pt-4">
-                        <button class="btn btn-primary" type="submit" name="submit">{{ __('Save') }}</button>
+                        <button class="btn btn-primary" type="submit" name="submit">{{ __('Simpan') }}</button>
                     </div>
                 </form>
             </div>
